@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas de Alta Entropia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h1><span>ENTROPY</span> GENERATOR</h1>
+        <p class="subtitle">Gerador de senhas seguras no padrão Cyberpunk</p>
+
+        <div class="password-display-container">
+            <input type="text" id="password-display" readonly placeholder="Sua senha aparecerá aqui...">
+            <button id="btn-copy" class="btn-secondary">Copiar</button>
+        </div>
+
+        <div class="entropy-container">
+            <div class="entropy-header">
+                <span>Força da Senha:</span>
+                <span id="entropy-text" class="status-none">Inexistente</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div id="entropy-bar" class="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="length-selector-container">
+            <label>Quantidade de Caracteres</label>
+            <div class="counter-control">
+                <button id="btn-minus" type="button">–</button>
+                <span id="length-value">16</span>
+                <button id="btn-plus" type="button">+</button>
+            </div>
+        </div>
+
+        <div class="options-container">
+            <label class="checkbox-label">
+                <input type="checkbox" id="chk-case" checked>
+                <span class="custom-checkbox"></span>
+                Misturar Maiúsculas e Minúsculas
+            </label>
+
+            <label class="checkbox-label">
+                <input type="checkbox" id="chk-number" checked>
+                <span class="custom-checkbox"></span>
+                Incluir Números
+            </label>
+
+            <label class="checkbox-label">
+                <input type="checkbox" id="chk-symbol" checked>
+                <span class="custom-checkbox"></span>
+                Incluir Símbolos Especiais
+            </label>
+
+            <label class="checkbox-label">
+                <input type="checkbox" id="chk-repeat" checked>
+                <span class="custom-checkbox"></span>
+                Evitar Caracteres Repetidos Sequenciais
+            </label>
+
+            <label class="checkbox-label">
+                <input type="checkbox" id="chk-start-letter">
+                <span class="custom-checkbox"></span>
+                Começar com Letra
+            </label>
+
+            <label class="checkbox-label">
+                <input type="checkbox" id="chk-space">
+                <span class="custom-checkbox"></span>
+                Incluir Espaços em Branco
+            </label>
+
+            <label class="checkbox-label">
+                <input type="checkbox" id="chk-fisher" checked>
+                <span class="custom-checkbox"></span>
+                Embaralhamento Avançado (Fisher-Yates)
+            </label>
+        </div>
+
+        <button id="btn-generate" class="btn-primary">GERAR SENHA</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
